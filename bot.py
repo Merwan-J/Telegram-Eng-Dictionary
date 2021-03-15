@@ -4,6 +4,7 @@ import requests
 import re
 import json
 import time
+import os
 
 
 # TODO
@@ -15,6 +16,9 @@ import time
 # ADD A BUTTON THAT GIVES AUDIO FOR PRONOUNCIATION || DONE
 # hyperlink in each synoyms and when clicked it brings the definitions of that word || KINDA A LOT OF WORK FOR USELESS BOT
 # INLINE FEATURES || DEFINITELY GONNA TRY IT OUT
+
+
+PORT = int(os.environ.get('PORT', 5000))
 
 
 def get_sense(word_id):
