@@ -8,7 +8,7 @@ import os
 
 
 PORT = int(os.environ.get('PORT', 5000))
-app_id = os.environ.get('APP_ID)
+app_id = os.environ.get('APP_ID')
 app_key = os.environ.get('APP_KEY')              
 
 
