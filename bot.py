@@ -8,6 +8,10 @@ import os
 
 
 PORT = int(os.environ.get('PORT', 5000))
+app_id = os.environ.get('APP_ID)
+app_key = os.environ.get('APP_KEY')              
+
+
 result = """"""
 
 
@@ -17,8 +21,7 @@ def get_sense(word_id):
     word = word_id
     
     # REQUIREMENTS FOR THE API
-    app_id = '614936c6'
-    app_key = 'e4766346cf2fc5e4a55f254c8e96e9bf'
+    
     language = 'en-gb'
     url = 'https://od-api.oxforddictionaries.com/api/v2/entries/'  + language + '/'  + word.lower()
     r = requests.get(url, headers = {'app_id' : app_id, 'app_key' : app_key}).json()
@@ -41,8 +44,7 @@ def get_sense(word_id):
 
 
 def get_audio(word):
-    app_id = '614936c6'
-    app_key = 'e4766346cf2fc5e4a55f254c8e96e9bf'
+
     language = 'en-gb'
     url = 'https://od-api.oxforddictionaries.com/api/v2/entries/'  + language + '/'  + word.lower()
     r = requests.get(url, headers = {'app_id' : app_id, 'app_key' : app_key}).json()
